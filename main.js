@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async function (event) {
     const ctx = canvas.getContext('2d');
 
     // create a new rain object
-    const rain = new Rain(100, ctx);
+    const rain = new Rain(Math.floor(ctx.canvas.width / 7.14), ctx); // 7.14 is 500 / 70 (70 seemed optimal)
     // draw the rain
 
     while (true) {
